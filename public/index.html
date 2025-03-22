@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>URL Shortener</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>URL Shortener</h1>
+
+        <form id="shorten-form">
+            <div class="label">
+                <label for="url">Enter URL:</label>
+                <input type="url" name="url" id="url" required>
+            </div>
+            <div class="label">
+                <label for="shortcode">Custom Short URL (Optional):</label>
+                <input type="text" name="shortcode" id="shortcode">
+            </div>
+            <button id="btn" type="submit">Shorten It</button>
+        </form>
+
+        <div class="shortened">
+            <h2>Shortened URLs:</h2>
+            <ul id="shortened-links"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
