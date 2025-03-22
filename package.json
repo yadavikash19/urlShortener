@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/yadavikash19/urlShortener/issues"
   },
-  "homepage": "https://github.com/yadavikash19/urlShortener#readme"
+  "homepage": "https://github.com/yadavikash19/urlShortener#readme",
+  "dependencies": {
+    "express": "^5.0.0"
+  }
 }

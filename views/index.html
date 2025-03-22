@@ -13,7 +13,10 @@
     <div class="container">
         <h1>URL Shortener</h1>
 
-        <form id="shorten-form">
+        <!-- Add this placeholder for error messages -->
+        {{ error }}
+        
+        <form action="/" method="post">
             <div class="label">
                 <label for="url">Enter URL:</label>
                 <input type="url" name="url" id="url" required>
@@ -27,11 +30,13 @@
 
         <div class="shortened">
             <h2>Shortened URLs:</h2>
-            <ul id="shortened-links"></ul>
+            <ul>
+                {{ shortened_urls }}
+            </ul>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
