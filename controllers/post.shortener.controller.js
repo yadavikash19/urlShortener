@@ -2,7 +2,7 @@ import crypto from "crypto";
 import fs,{ readFile, writeFile } from "fs/promises";
 import path from "path";
 
-import { loadLinks, saveLinks } from "../models/shortener.models.js";
+import { loadLinks, saveLinks, getLinkByShortCode } from "../models/shortener.models.js";
 
 //To yha pe function creating- OR Controller folder me jake define kroge
 //Controller ka kaam- to deal with modal n view
@@ -34,8 +34,11 @@ export const postURLShortener= async (req, res) => {
             // return res.status(400).send("Short code already exists. Please choose another.");
         }
 
-        links[finalShortCode] = url;
-        await saveLinks(links);
+        // links[finalShortCode] = url; //NO more required because of MongoDB Database
+        // await saveLinks(links);
+
+        await saveLinks({url, shortcode});
+
         return res.redirect("/");
     } catch (error) {
         console.error(error);
@@ -46,11 +49,13 @@ export const postURLShortener= async (req, res) => {
 export const redirectToShortLink= async (req, res) => {
     try {
         const { shortcode } = req.params;
-        const links = await loadLinks();
+        // const links = await loadLinks(); //NO more required because of MongoDB Database
+        const link = await getLinkByShortCode(shortcode); //in link we r getting full document
 
-        if (!links[shortcode]) return res.status(404).send("404 error occured");
+        if (!link) return res.redirect("/404");
+        // if (!link) return res.status(404).send("404 error occured"); //Alternate way
 
-        return res.redirect(links[shortcode]);
+        return res.redirect(link.url);
     } catch (error) {
         console.error(error);
         return res.status(500).send("Internal server error");

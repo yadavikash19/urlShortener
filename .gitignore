@@ -3,3 +3,4 @@ serverInNode
 node_modules
 package-lock.json
 links.json
+.env

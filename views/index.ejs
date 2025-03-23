@@ -30,7 +30,8 @@
         <div class="shortened">
             <h2>Shortened URLs:</h2>
             <ul>
-                <% Object.entries(links).map(([shortcode, url]) => {%>
+                <%# Object.entries(links).map(([shortcode, url]) => {%> 
+                <% links.map(({shortcode, url}) => {%>
                 <% const truncatedURL = url.length >= 30 ? `${url.slice(0, 30)}...` : url;%>
                 <li>
                     <p> <a href="/<%= shortcode%>" target="_blank"><%= host%>/<%= shortcode%></a> - <%= truncatedURL%></p> 
