@@ -1,4 +1,4 @@
-import router from "./routes/shortener.routes.js"
+import {shortenerRouters} from "./routes/shortener.routes.js"
 
 import path from "path";
 
@@ -18,7 +18,7 @@ app.set("view engine", "ejs");
 // app.set("views", "./views");
 
 // express router
-app.use(router);
+app.use(shortenerRouters);
 
 app.listen(PORT, () => {
     console.log(`Server is running at port: ${PORT}`);

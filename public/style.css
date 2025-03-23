@@ -85,8 +85,10 @@ div.shortened{
     padding: 20px;
 }
 
-li{
+li {
     padding: 10px;
+    margin: 10px;
     list-style: none;
     font-size: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Uniform shadow from all sides */
 }
