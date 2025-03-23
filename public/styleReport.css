@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1{
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+ul.report{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+li.report{
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    box-shadow: 1px 1px 1px rgb(53, 52, 52);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li.report p{
+    font-weight: 600;
+    margin: 5px;
+}
+

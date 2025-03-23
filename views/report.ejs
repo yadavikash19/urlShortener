@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleReport.css">
+</head>
+
+<body>
+    <%- include('header') %>
+    <h1 class="report">Student Report Card</h1>
+    <ul class="report">
+
+    <% student.forEach(element=> { %>
+        <li class="report">
+            <p> Name: <%= element.name %> </p>
+            <p> Class: <%= element.grade %> </p>
+            <p> Favorite Subject: <%= element.favoriteSubject %> </p>
+        </li>
+    <% }); %>
+
+    </ul>
+</body>
+
+</html>
