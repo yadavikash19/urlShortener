@@ -37,7 +37,7 @@ export const postURLShortener= async (req, res) => {
         // links[finalShortCode] = url; //NO more required because of MongoDB Database
         // await saveLinks(links);
 
-        await saveLinks({url, shortcode});
+        await saveLinks({url, shortcode:finalShortCode});
 
         return res.redirect("/");
     } catch (error) {
