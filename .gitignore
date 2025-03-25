@@ -6,3 +6,5 @@ links.json
 .env
 mongoose
 mysql
+basicCRUD.sql
+migrations

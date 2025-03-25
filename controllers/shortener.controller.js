@@ -2,7 +2,8 @@ import crypto from "crypto";
 import fs,{ readFile, writeFile } from "fs/promises";
 import path from "path";
 
-import { loadLinks, saveLinks, getLinkByShortCode } from "../models/shortener.models.js";
+// import { loadLinks, saveLinks, getLinkByShortCode } from "../models/shortener.models.js";
+import { loadLinks, saveLinks, getLinkByShortCode } from "../services/shortener.services.js";
 
 //To yha pe function creating- OR Controller folder me jake define kroge
 //Controller ka kaam- to deal with modal n view

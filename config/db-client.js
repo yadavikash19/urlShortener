@@ -3,6 +3,7 @@ import { env } from "./env.js";
 
 // export const dbClient= new MongoClient(env.MONGODB_URI);
 
+/*
 import mysql from "mysql2/promise";
 
 // 1: to connect to mysql server
@@ -13,3 +14,4 @@ export const db_mysql= await mysql.createConnection({
     database: env.DATABASE_NAME,
 })
 console.log("MySQL Connected Successfully");
+*/
